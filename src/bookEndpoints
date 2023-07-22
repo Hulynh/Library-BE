@@ -1,0 +1,24 @@
+const bookController = require('./bookController');
+const routes = [
+    {
+        method: 'GET',
+        url: '/api/books',
+        handler: bookController.getAllBooks
+    },
+    {
+        method: 'GET',
+        url: '/api/book/:id',
+        handler: bookController.getSingleBook
+    },
+    {
+        method: 'POST',
+        url: '/api/book',
+        handler: bookController.addNewBook
+    },
+    {
+        method: 'PUT',
+        url: '/api/book/:id',
+        handler: bookController.updateBook
+     },
+]
+module.exports = routes
